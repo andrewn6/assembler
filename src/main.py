@@ -1,7 +1,9 @@
-from tkinter import *
+from tkinter import * 
 from tkinter import filedialog
 
-
+import re
+import sys
+import os.path
 filename = "Untitled"
 filexxists = False
 
@@ -193,5 +195,20 @@ def exit_app():
 def compile_asm():
     global filename
     cpu_out = ""
-    
+    asm_in = textArea.get("1.0", END)
+    asmlines = re.split("\n" asm_in)
+    for i in range (len(asmlines)):
+        if (asmlines[1] != ""):
+            cpu_out += str(i) + " => x\"" = decode(asmlines[i]) + "\",\n"
+    name, ext = os.path.splitext(filename)
+    hexfilename = name + ".hex"
+    hexfile = open(hexfilename, "w")
+    hexfile.seek(0)
+    hexfile.truncate()
+    hexfile.write(cpu_out)
+    hexfile.close()
 
+Tk().withdraw()
+frame = TopLevel()
+
+scrollbar =
