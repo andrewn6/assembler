@@ -1,8 +1,8 @@
 FROM python:3.8
 
 # Meta data
-LABEL maintainer="matthewgleich@gmail.com"
-LABEL description="PROJECT_DESCRIPTION"
+LABEL maintainer="andrewnijmeh1@gmail.com"
+LABEL description="Simple assembler written in python."
 
 # Copying over all the files
 COPY . /usr/src/app
