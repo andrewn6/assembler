@@ -1,4 +1,4 @@
-<!-- DO NOT REMOVE - contributor_list:data:start:["Matt-Gleich", "whitesource-bolt-for-github[bot]"]:end -->
+<!-- DO NOT REMOVE - contributor_list:data:start:["notandrewdev"]:end -->
 
 # PROJECT_NAME
 
@@ -13,11 +13,9 @@ PROJECT_DESCRIPTION
 Before contributing please read the [CONTRIBUTING.md file](https://github.com/Matt-Gleich/PROJECT_NAME/CONTRIBUTING.md)
 
 <!-- DO NOT REMOVE - contributor_list:start -->
-
 ## 👥 Contributors
 
-- **[@Matt-Gleich](https://github.com/Matt-Gleich)**
 
-- **[@whitesource-bolt-for-github[bot]](https://github.com/apps/whitesource-bolt-for-github)**
+- **[@notandrewdev](https://github.com/notandrewdev)**
 
 <!-- DO NOT REMOVE - contributor_list:end -->
