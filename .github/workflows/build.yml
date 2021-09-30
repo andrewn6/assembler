@@ -1,0 +1,25 @@
+name: build
+
+on:
+  - push
+  - pull_request
+
+jobs:
+  docker-prod:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Build the Image
+        run: make build-docker-prod
+  docker-dev:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Build the Image
+        run: make build-docker-dev
+  docker-dev-lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Build the Image
+        run: make build-docker-dev-lint
