@@ -1,13 +1,8 @@
 <!-- DO NOT REMOVE - contributor_list:data:start:["notandrewdev"]:end -->
 
-# PROJECT_NAME
+# An assembler written in python 
 
-![build](https://github.com/Matt-Gleich/PROJECT_NAME/workflows/build/badge.svg)
-![test](https://github.com/Matt-Gleich/PROJECT_NAME/workflows/test/badge.svg)
-![lint](https://github.com/Matt-Gleich/PROJECT_NAME/workflows/lint/badge.svg)
-
-PROJECT_DESCRIPTION
-
+>300 lines of code to understand disassemblers/assemblers and also Assembly.
 ## 🙌 Contributing
 
 Before contributing please read the [CONTRIBUTING.md file](https://github.com/Matt-Gleich/PROJECT_NAME/CONTRIBUTING.md)
