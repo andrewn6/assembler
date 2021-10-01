@@ -1,11 +1,14 @@
 from tkinter import * 
 from tkinter import filedialog
+import tkinter as tk
 
 import re
 import sys
 import os.path
 filename = "Untitled"
 filexxists = False
+
+frame = tk.Tk()
 
 def asmtoint(asm):
     import re
@@ -196,10 +199,10 @@ def compile_asm():
     global filename
     cpu_out = ""
     asm_in = textArea.get("1.0", END)
-    asmlines = re.split("\n" asm_in)
+    asmlines = re.split("\n", asm_in)
     for i in range (len(asmlines)):
         if (asmlines[1] != ""):
-            cpu_out += str(i) + " => x\"" = decode(asmlines[i]) + "\",\n"
+            cpu_out += str(i) + " => x\"" + decode(asmlines[i]) + "\",\n"
     name, ext = os.path.splitext(filename)
     hexfilename = name + ".hex"
     hexfile = open(hexfilename, "w")
@@ -208,7 +211,28 @@ def compile_asm():
     hexfile.write(cpu_out)
     hexfile.close()
 
-Tk().withdraw()
+tk().withdraw()
 frame = TopLevel()
 
-scrollbar =
+scrollbar = Scrollbar(frame)
+scrollbar.pack(side=RIGHT, fill=Y)
+frame.title("Assembler ["+ filename + "]")
+textArea = Text(frame, height=30, width=110, padx=2, pady=2, yscrollcommand = scrollbar.set)
+textArea.pack(side=RIGHT)
+scrollBar.config(command=textArea.yview)
+
+menu = Menu(frame)
+filemenu = Menu(menubar, tearoff=0)
+filemenu.add_command(label="Open", command=openFile)
+filemenu.add_command(label="Save", command=saveFile, state = DISABLED)
+filemenu.add_command(label="Save as...", command=saveFileAs)
+filemenu.add_command(label="Exit", command=exitApp)
+menubar.add_cascade(label="File", menu=filemenu)
+runmenu = Menu(menubar, tearoff=0)
+runmenu.add_command(label="Compile", command=compileASM)
+menubar.add_cascade(label="Run", menu=runmenu)
+frame.config(menu=menubar)
+
+frame.minsize(750, 450)
+frame.maxsize(750, 450)
+frame.mainloop()
