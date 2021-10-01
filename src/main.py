@@ -9,6 +9,8 @@ import os.path
 filename = "Untitled"
 filexxists = False
 
+root = tk.Tk()
+
 def asmtoint(asm):
     import re
     asm_split = re.split(" |, |\(|\)", asm)
@@ -211,24 +213,24 @@ def compile_asm():
     hexfile.close()
 
 #tk().withdraw()
-frame = TopLevel()
+frame = Toplevel()
 
-scrollbar = Scrollbar(frame)
+scrollbar = Scrollbar(root)
 scrollbar.pack(side=RIGHT, fill=Y)
 frame.title("Assembler ["+ filename + "]")
 textArea = Text(frame, height=30, width=110, padx=2, pady=2, yscrollcommand = scrollbar.set)
 textArea.pack(side=RIGHT)
-scrollBar.config(command=textArea.yview)
+scrollbar.config(command=textArea.yview)
 
-menu = Menu(frame)
+menubar = Menu(frame)
 filemenu = Menu(menubar, tearoff=0)
 filemenu.add_command(label="Open", command=openFile)
 filemenu.add_command(label="Save", command=saveFile, state = DISABLED)
 filemenu.add_command(label="Save as...", command=saveFileAs)
-filemenu.add_command(label="Exit", command=exitApp)
+filemenu.add_command(label="Exit", command=exit_app)
 menubar.add_cascade(label="File", menu=filemenu)
 runmenu = Menu(menubar, tearoff=0)
-runmenu.add_command(label="Compile", command=compileASM)
+runmenu.add_command(label="Compile", command=compile_asm)
 menubar.add_cascade(label="Run", menu=runmenu)
 frame.config(menu=menubar)
 
