@@ -5,10 +5,9 @@ import tkinter as tk
 import re
 import sys
 import os.path
+
 filename = "Untitled"
 filexxists = False
-
-frame = tk.Tk()
 
 def asmtoint(asm):
     import re
@@ -211,7 +210,7 @@ def compile_asm():
     hexfile.write(cpu_out)
     hexfile.close()
 
-tk().withdraw()
+#tk().withdraw()
 frame = TopLevel()
 
 scrollbar = Scrollbar(frame)
