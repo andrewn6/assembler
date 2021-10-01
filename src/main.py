@@ -218,7 +218,7 @@ frame = Toplevel()
 scrollbar = Scrollbar(root)
 scrollbar.pack(side=RIGHT, fill=Y)
 frame.title("Assembler ["+ filename + "]")
-textArea = Text(frame, height=30, width=110, padx=2, pady=2, yscrollcommand = scrollbar.set)
+textArea = Text(frame, height=30, width=100, padx=3, pady=3, yscrollcommand = scrollbar.set)
 textArea.pack(side=RIGHT)
 scrollbar.config(command=textArea.yview)
 
