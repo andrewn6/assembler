@@ -1,6 +1,7 @@
 from tkinter import * 
-from tkinter import filedialog
 import tkinter as tk
+from tkinter import filedialog
+from tkinter.filedialog import askopenfilename, asksaveasfilename
 
 import re
 import sys
