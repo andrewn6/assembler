@@ -7,7 +7,7 @@ import sys
 import os.path
 
 filename = "Output"
-filexxists = False
+fileexists = False
 
 root = tk.Tk()
 
