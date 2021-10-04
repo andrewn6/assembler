@@ -130,7 +130,7 @@ def into_hex(opcode, rs, rt, rd, func, imm):
         rtstr = format(rt, '03b')
         rdstr = format(rd, '03b')
         fnstr = format(func, '05b')
-        ## print opstr, rsstr, rtstr, rdstr, fnstr <-- POC CODE
+        print(opstr, rsstr, rtstr, rdstr, fnstr) #<-- POC CODE
         instruc = opstr + rsstr + rtstr + rdstr + fnstr
     else:
         opstr = format(opcode, '02b')
@@ -212,7 +212,6 @@ def compile_asm():
     hexfile.write(cpu_out)
     hexfile.close()
 
-#tk().withdraw()
 frame = Toplevel()
 
 scrollbar = Scrollbar(root)
