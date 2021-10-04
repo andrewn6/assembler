@@ -15,4 +15,4 @@ RUN poetry config virtualenvs.create false
 RUN poetry install --no-root --no-dev -n
 RUN pip3 uninstall poetry
 
-CMD ["python3", "main.py"]
+CMD ["python3", "src/main.py"]

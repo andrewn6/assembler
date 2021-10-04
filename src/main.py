@@ -6,7 +6,7 @@ import re
 import sys
 import os.path
 
-filename = "Untitled"
+filename = "Output"
 filexxists = False
 
 root = tk.Tk()
@@ -186,7 +186,7 @@ def saveFileAs():
         asmfile.truncate()
         asmfile.write(asmdata)
         asmfile.close()
-        filemenu.entryconfig(filemenu.index("Save"), state = Normal)
+        filemenu.entryconfig(filemenu.index("Save"), state = NORMAL)
         frame.title("Assembler [" + filename +"]")
         frame.focus()
 
