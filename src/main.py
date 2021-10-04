@@ -69,8 +69,7 @@ def asmtoint(asm):
             return 0,0,0,0,0,0
         opcode = 1
         rd = int(args[1][1:])
-        rs = int(args[2][1:])
-        rt = int(args[3][1:])
+        rs = int(args[1][1:])
         imm = int(args[2])
     elif (args[0] == "bnez"):
         if (len(args) !=3):
